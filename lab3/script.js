@@ -22,21 +22,21 @@ task2.addEventListener("click", () => {
     function getStudentInfo() {
         const name = prompt("Введіть Ваше ім'я");
         const score = prompt("Ваш бал (0-12)");
-        return name, score;
+        return {name, score};
     }
 
     function checkGrade(score) {
-        if (10 <= score <= 12) {
+        if (score >= 10 && score <= 12) {
             return "Excellent";
         }
-        else if (7 <= score <= 9) {
+        else if (score >= 7 && score <= 9) {
             return "Good";
         }
-        else if (4 <= score <= 6) {
+        else if (score >= 4 && score <= 6) {
             return "Satisfactory";
         }
         else {
-            return "Fail"
+            return "Fail";
         }
     }
 
