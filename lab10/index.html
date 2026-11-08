@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lr7</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="cart-icon-container" id="cartButton">
+        <svg class="cart-svg" viewBox="0 0 24 24">
+            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+        </svg>
+        <span class="cart-counter" id="cartCounter">0</span>
+    </div>
+
+    <div class="container" id="catalogSection">
+        <h1>Обов'язково додайте своє замовлення</h1>
+        <div class="wrap">
+            <div class="product-card" data-id="1" data-name="ЖК Зелений квартал" data-price="50000">
+                <div class="badge new">Новинка</div>
+                <h3 class="category">Новий ЖК</h3>
+                <div class="swipe left">&lt;</div>
+                <div class="img-container">
+                    <img src="images/green-quarter.jpg" alt="">
+                </div>
+                <a href="https://vn.com.ua/ua/complex/zhk-zelenyy-kvartal" class="link">ЖК "Зелений квартал"</a>
+                <button class="btn soon add-to-cart">Незабаром у продажі</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Таунхаус Garden City" data-price="90000">
+                <h3 class="category">Котедж</h3>
+                <div class="img-container">
+                    <img src="images/cottage.jpg" alt="">
+                </div>
+                <a href="https://proektcottage.com.ua/uk/tag/typovyj-proekt-budynku-kotedzhu/" class="link">Таунхаус "Garden City"</a>
+                <div class="price">
+                    <span class="old-price">$124,999</span>
+                    <span>$90,000</span>
+                </div>
+                <button class="btn add-to-cart">Додати у корзину</button>
+            </div>
+            <div class="product-card" data-id="3" data-name="БЦ Скайлайн" data-price="1500">
+                <div class="badge">Хіт продажів</div>
+                <h3 class="category">Оренда • Офіс</h3>
+                <div class="img-container">
+                    <img src="images/rent-office.jpg" alt="">
+                </div>
+                <a href="https://peremoga.space/en/chto-takoe-ofys-formata-open-space-peremoga-space/" class="link">БЦ "Скайлайн"</a>
+                <div class="price">
+                    <span>$1,500</span>
+                </div>
+                <button class="btn add-to-cart">Додати у корзину</button>
+            </div>
+            <div class="product-card" data-id="4" data-name="Квартира Студія" data-price="45000">
+                <div class="badge">Хіт продажів</div>
+                <h3 class="category">Будується</h3>
+                <div class="swipe right">&gt;</div>
+                <div class="img-container">
+                    <img src="images/apartment.jpg" alt="">
+                </div>
+                <a href="https://volynonline.com/kvartyra-studiya-shho-cze-take-yaki-perevagy-ta-nedoliky-takoyi-neruhomosti/" class="link">Квартира • Студія</a>
+                <div class="price">
+                    <span>$45,000</span>
+                </div>
+                <button class="btn add-to-cart">Додати у корзину</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="cartSection" style="display: none;">
+        <h1>Ми обрали:</h1>
+        <div class="cart-table-wrap">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Назва товару</th>
+                        <th>Ціна за од.</th>
+                        <th>К-сть</th>
+                        <th>Сума</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" style="text-align: right; font-weight: bold;">Разом до оплати:</td>
+                        <td colspan="2" id="cartTotal" style="font-weight: bold;">0.00 грн.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="cart-actions-links">
+            <a href="#" id="payBtn" class="link-action">Оплатити</a>
+            <a href="#" id="backToShopBtn" class="link-action">Повернутись до покупок</a>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-window">
+            <p id="modalMessage"></p>
+            <div id="modalContent"></div>
+            <div class="modal-buttons" id="modalButtons"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
